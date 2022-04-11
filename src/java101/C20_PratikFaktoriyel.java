@@ -1,6 +1,6 @@
 package java101;
 
-public class C20_pratikFaktoriyel {
+public class C20_PratikFaktoriyel {
     /*Ödev
 N elemanlı bir kümenin elemanları ile oluşturulacak r elemanlı farklı grupların sayısı n’in r’li kombinasyonu olarak adlandırılır. N’in r’li kombinasyonu C(n,r) şeklinde gösterilir.
 
