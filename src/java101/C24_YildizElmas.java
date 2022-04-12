@@ -1,6 +1,6 @@
 package java101;
 
-public class C24_YıldızlardanElmas {
+public class C24_YildizElmas {
     /*
     example of output:
      *
