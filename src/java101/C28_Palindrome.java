@@ -14,13 +14,11 @@ public class C28_Palindrome {
         int count=0;
         int[] arr=new int[basamak];
 
-
         for (int i = arr.length-1; i >=0 ; i--) {
             arr[i]=sayi%10;
             sayi/=10;
 
         }
-
 
         for (int i = 0; i <=(basamak-1)/2 ; i++) {
 
@@ -31,7 +29,6 @@ public class C28_Palindrome {
                 return;
             }
         }
-
             System.out.println("Sayı palindrome'dur");
 
     }
