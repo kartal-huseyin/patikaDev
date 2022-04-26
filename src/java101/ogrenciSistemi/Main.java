@@ -13,7 +13,7 @@ public class Main {
         Course biyoloji=new Course("Biyoloji","102", "BIO");
         Course beden=new Course("Beden Egitimi", "BDN","103");
 
-        tarih.addTeacher(t2);
+        tarih.addTeacher(t1);
 
 
         Student s1=new Student("İnek Şaban",40,60,70);
