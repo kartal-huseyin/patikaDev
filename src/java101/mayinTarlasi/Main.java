@@ -41,8 +41,11 @@ public class Main {
 
         do {
             System.out.println("Satır/sütün seçiniz: ");
-            int s1=scanner.nextInt();
-            int s2=scanner.nextInt();
+            int s1= s1 = scanner.nextInt();
+            int s2=s2=scanner.nextInt();
+
+            try {
+
             hamle++;
             if(arrMayin[s1][s2].equals("*")){
                 System.out.println("KAYBETTİNİZ");
@@ -124,6 +127,9 @@ public class Main {
                     }
                     System.out.println();
                 }
+            }
+            } catch (Exception e) {
+                System.err.println("Index dışına çıktınız");
             }
 
         }while(isWin);
