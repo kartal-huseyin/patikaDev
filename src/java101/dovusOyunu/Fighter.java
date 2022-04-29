@@ -45,22 +45,23 @@ public class Fighter {
 
     }
 
-    public void hit(Fighter first, Fighter second) {
+    public void hit(Fighter f2) {
         int block = (int) Math.round(Math.random() * 100);
         int hit = (int) Math.round(Math.random() * 100);
-        if (second.blockPercentage > block) {
-            if(first.ultiHitPercent>hit){
-                System.out.printf("*ULTI* saldırı BLOKLANDI\n");
+        if (f2.blockPercentage > block) {
+            if(this.ultiHitPercent>hit){
+                System.out.print("*ULTI* saldırı BLOKLANDI\n");
             }else{
-                System.out.printf("BLOKLANDI\n");
+                System.out.print("BLOKLANDI\n");
             }
 
         } else {
-            if(first.ultiHitPercent>hit){
-                System.out.printf("*ULTI* %d puan !\n",2*first.damage);
-                setHealt(second.healt -= 2*first.damage);
+            if(this.ultiHitPercent>hit){
+                System.out.printf("*ULTI* %d puan !\n",2*this.damage);
+                f2.setHealt(f2.healt -= 2*this.damage);
             }else{
-                setHealt(second.healt -= first.damage);
+                System.out.printf("*Vurdu* %d puan !\n",this.damage);
+                f2.setHealt(f2.healt -= this.damage);
             }
 
         }
@@ -79,11 +80,11 @@ public class Fighter {
         do {
             System.out.println("*** Round " + (++round) + " : ***");
             if (bl) {
-                System.out.println(f1.getName()+" vurdu ! ");
-                f2.hit(f1, f2); //f1 -> f2 ye vuruyor ; f1 vurduğundan , f2 objesinin sağlığı üzerinde manipülasyon yapıldığı için, f2 objesi üzerinden nesneleri gönderiyorum.
+                System.out.println(f1.getName()+" saldırdı ! ");
+                f1.hit(f2);
             } else {
-                System.out.println(f2.getName()+" vurdu ! ");
-                f1.hit(f2, f1);
+                System.out.println(f2.getName()+" saldırdı ! ");
+                f2.hit(f1);
             }
             System.out.println(f1);
             System.out.println(f2);
