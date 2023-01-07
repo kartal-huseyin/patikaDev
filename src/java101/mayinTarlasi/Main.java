@@ -27,7 +27,8 @@ public class Main {
             System.out.println();
         }
 
-        int mayinAdedi=satir*sutun/4;
+        int mayinAdedi=satir*sutun/
+                4;
 
         for (int i = 0; i <mayinAdedi ; i++) {
 
